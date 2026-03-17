@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - 100 Mexicanos Dijeron</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="teams-container">
+            <div class="team active" id="team1">
+                <h2>Equipo Azul</h2>
+                <div class="score">0</div>
+                <div class="strikes">
+                    <div class="strike"></div>
+                    <div class="strike"></div>
+                    <div class="strike"></div>
+                </div>
+            </div>
+            <div class="team" id="team2">
+                <h2>Equipo Rojo</h2>
+                <div class="score">0</div>
+                <div class="strikes">
+                    <div class="strike"></div>
+                    <div class="strike"></div>
+                    <div class="strike"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <h2 id="current-question">¿Menciona algo que la gente desayuna en domingo?</h2>
+        </div>
+
+        <div class="answers-container">
+            <!-- Las respuestas se generan dinámicamente -->
+        </div>
+
+        <div class="controls">
+            <div class="timer-container">
+                <div class="timer-bar"></div>
+            </div>
+            <div class="buttons-container">
+                <button id="correct-answer" class="control-btn correct">¡Correcto!</button>
+                <button id="wrong-answer" class="control-btn wrong">Incorrecto</button>
+                <button id="steal-points" class="control-btn steal">Robar</button>
+                <button id="reveal-answers" class="control-btn reveal">Revelar Respuestas</button>
+                <button id="next-round" class="control-btn next">Siguiente Ronda</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sonidos -->
+    <audio id="correct-sound" src="sounds/correct.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="sounds/error.mp3" preload="auto"></audio>
+    <audio id="steal-sound" src="sounds/steal.mp3" preload="auto"></audio>
+    <audio id="winner-sound" src="sounds/winner.mp3" preload="auto"></audio>
+    <audio id="start-sound" src="sounds/start.mp3" preload="auto"></audio>
+    <audio id="transition-sound" src="sounds/transition.mp3" preload="auto"></audio>
+    <audio id="timer-sound" src="sounds/timer.mp3" preload="auto"></audio>
+
+    <script src="js/game.js"></script>
+</body>
+
+</html>

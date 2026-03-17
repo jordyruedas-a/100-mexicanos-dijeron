@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - 100 Mexicanos Dijeron</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/results.css">
+</head>
+
+<body>
+    <div class="results-container">
+        <h1>Resultados Finales</h1>
+
+        <div class="teams-results">
+            <div class="team-result" id="result-team1">
+                <h2>Equipo Azul</h2>
+                <div class="final-score">0</div>
+            </div>
+            <div class="team-result" id="result-team2">
+                <h2>Equipo Rojo</h2>
+                <div class="final-score">0</div>
+            </div>
+        </div>
+
+        <div class="winner-container">
+            <h2 id="winner-text">¡Equipo Azul Gana!</h2>
+        </div>
+
+        <div class="results-actions">
+            <button id="play-again" class="action-btn">Revancha</button>
+            <button id="main-menu" class="action-btn">Menú Principal</button>
+            <button id="share-results" class="action-btn">Compartir</button>
+        </div>
+
+        <div class="confetti"></div>
+    </div>
+
+    <audio id="winner-sound" src="sounds/winner.mp3" type="audio/mpeg" preload="auto"></audio>
+    <audio id="fireworks-sound" src="sounds/fireworks.mp3" preload="auto"></audio>
+
+    <script src="js/results.js"></script>
+</body>
+
+</html>

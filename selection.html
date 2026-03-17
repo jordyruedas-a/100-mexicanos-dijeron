@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Equipos - 100 Mexicanos Dijeron</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/selection.css">
+</head>
+
+<body>
+    <div class="selection-container">
+        <h1>Preparar Partida</h1>
+
+        <div class="back-button">
+            <button id="back-to-menu">← Volver al Menú</button>
+        </div>
+
+        <div class="mode-selection">
+            <h2>Seleccionar modo de juego:</h2>
+            <div class="mode-options">
+                <button id="predefined-mode" class="mode-btn active">Preguntas Predefinidas</button>
+                <button id="custom-mode" class="mode-btn">Mis Preguntas</button>
+            </div>
+        </div>
+
+        <div class="teams-selection">
+            <div class="team-input">
+                <label for="team1-name">Equipo 1:</label>
+                <input type="text" id="team1-name" placeholder="Nombre del equipo 1">
+            </div>
+
+            <div class="team-input">
+                <label for="team2-name">Equipo 2:</label>
+                <input type="text" id="team2-name" placeholder="Nombre del equipo 2">
+            </div>
+        </div>
+
+        <div class="questions-selection" id="custom-questions-container" style="display: none;">
+            <h2>Seleccionar preguntas:</h2>
+            <div id="custom-questions-list">
+                <!-- Las preguntas personalizadas se cargarán aquí -->
+            </div>
+        </div>
+
+        <button id="start-game" class="start-btn">Comenzar Juego</button>
+    </div>
+
+    <script src="js/selection.js"></script>
+</body>
+
+</html>

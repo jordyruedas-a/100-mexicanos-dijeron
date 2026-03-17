@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Preguntas - 100 Mexicanos Dijeron</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+    <div class="editor-container">
+        <h1>Editor de Preguntas</h1>
+
+        <div class="back-button">
+            <button id="back-to-menu">← Volver al Menú</button>
+        </div>
+
+        <div class="editor-form">
+            <div class="question-section">
+                <label for="question-text">Pregunta:</label>
+                <textarea id="question-text" placeholder="Escribe tu pregunta aquí..."></textarea>
+
+                <div class="category-section">
+                    <label for="question-category">Categoría (opcional):</label>
+                    <select id="question-category">
+                        <option value="">Selecciona una categoría</option>
+                        <option value="comida">Comida</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="entretenimiento">Entretenimiento</option>
+                        <option value="ciencia">Ciencia</option>
+                        <option value="historia">Historia</option>
+                        <option value="geografia">Geografía</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="answers-section">
+                <h2>Respuestas (máximo 10)</h2>
+                <div id="answers-list">
+                    <!-- Las respuestas se agregarán dinámicamente -->
+                </div>
+
+                <button id="add-answer" class="add-btn">+ Añadir respuesta</button>
+
+                <div class="votes-validation">
+                    <span>Total de votos: </span>
+                    <span id="total-votes">0</span>
+                    <span>/100</span>
+                    <div id="votes-error" class="error-message"></div>
+                </div>
+            </div>
+
+            <div class="editor-actions">
+                <button id="preview-btn" class="action-btn">Vista previa</button>
+                <button id="save-btn" class="action-btn primary">Guardar pregunta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de vista previa -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Vista previa de la pregunta</h2>
+            <div id="preview-content"></div>
+        </div>
+    </div>
+
+    <script src="js/editor.js"></script>
+</body>
+
+</html>
